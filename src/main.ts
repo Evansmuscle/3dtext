@@ -30,7 +30,7 @@ scene.add(pointLight);
 const textLoadManager = new THREE.LoadingManager();
 const textureLoader = new THREE.TextureLoader(textLoadManager);
 
-const matcap = textureLoader.load("./assets/matcaps/8.png");
+const matcap = textureLoader.load("/matcaps/8.png");
 
 // Axes Helper
 // const axesHelper = new THREE.AxesHelper();
@@ -45,7 +45,7 @@ function generateRandomPoint() {
   return (Math.random() - 0.5) * 20;
 }
 
-fontLoader.load("./assets/fonts/noto_regular.typeface.json", (font) => {
+fontLoader.load("/fonts/noto_regular.typeface.json", (font) => {
   const textGeometry = new TextGeometry("Hello, Khan!", {
     font,
     size: 0.5,
